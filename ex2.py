@@ -1,5 +1,7 @@
 import random
 
+
+"""Documentation initiaition """
 # Générer un nombre aléatoire entre 1 et 100
 nombre_aleatoire = random.randint(1, 100)
 

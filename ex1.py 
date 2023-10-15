@@ -1,0 +1,26 @@
+# Fonction pour vérifier si l'heure (h) et les minutes (m) sont valides
+def est_heure_valide(h, m):
+    return 0 <= h <= 23 and 0 <= m <= 59
+
+while True:
+    # Saisie de l'heure et des minutes
+    h = int(input("Saisissez l'heure (0-23) : "))
+    m = int(input("Saisissez les minutes (0-59) : "))
+    
+    # Vérification de validité
+    if est_heure_valide(h, m):
+        break
+    else:
+        print("Heure ou minutes invalides. Assurez-vous que l'heure est entre 0 et 23 et les minutes entre 0 et 59.")
+
+# Calcul de l'heure une minute plus tard
+m += 1
+if m == 60:
+    m = 0
+    h += 1
+    if h == 24:
+        h = 0
+
+# Affichage de l'heure une minute plus tard dans le format demandé
+heure_suivante = f"{h:02d}:{m:02d}"
+print("Dans une minute, il sera :", heure_suivante)
