@@ -26,3 +26,6 @@ while True:
 
     except ValueError:
         print("Prix HT invalide. Veuillez saisir une valeur numérique.")
+else:
+    print("Nombre de produits invalide. Veuillez saisir un nombre entier positif.")
+        
